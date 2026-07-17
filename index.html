@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f7f3e8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Cycle Work">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Cycle to Work Tracker</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="assets/icon.svg">
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="top-bar" aria-labelledby="app-title">
+        <div>
+          <p class="eyebrow">Cycle to work</p>
+          <h1 id="app-title">Commute tracker</h1>
+        </div>
+        <button class="icon-button" id="today-button" type="button" aria-label="Jump to today">Today</button>
+      </section>
+
+      <section class="summary-stack" aria-label="Ride totals">
+        <div class="summary-header">
+          <article class="total-card" aria-label="Money saved total">
+            <span>Money Saved total</span>
+            <strong id="total-money">£0.00</strong>
+          </article>
+        </div>
+        <div class="metric-group">
+          <div class="metric-title-row">
+            <h2>Money saved</h2>
+            <label class="year-filter">
+              <span>Year</span>
+              <select id="year-filter" aria-label="Filter statistics by year"></select>
+            </label>
+          </div>
+          <div class="metric-row">
+            <article class="stat-card primary-stat">
+              <span class="stat-label">Week</span>
+              <strong id="week-money">£0.00</strong>
+            </article>
+            <article class="stat-card primary-stat">
+              <span class="stat-label">Month</span>
+              <strong id="month-money">£0.00</strong>
+            </article>
+            <article class="stat-card primary-stat">
+              <span class="stat-label">Year</span>
+              <strong id="year-money">£0.00</strong>
+            </article>
+          </div>
+        </div>
+        <div class="metric-group">
+          <h2>Calories burned</h2>
+          <div class="metric-row">
+            <article class="stat-card">
+              <span class="stat-label">Week</span>
+              <strong id="week-calories">0 kcal</strong>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">Month</span>
+              <strong id="month-calories">0 kcal</strong>
+            </article>
+            <article class="stat-card">
+              <span class="stat-label">Year</span>
+              <strong id="year-calories">0 kcal</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="calendar-panel" aria-labelledby="calendar-title">
+        <div class="month-toolbar">
+          <button class="nav-button" id="prev-month" type="button" aria-label="Previous month">&lt;</button>
+          <h2 id="calendar-title"></h2>
+          <button class="nav-button" id="next-month" type="button" aria-label="Next month">&gt;</button>
+        </div>
+        <div class="weekday-grid" aria-hidden="true">
+          <span>Mon</span>
+          <span>Tue</span>
+          <span>Wed</span>
+          <span>Thu</span>
+          <span>Fri</span>
+          <span>Sat</span>
+          <span>Sun</span>
+        </div>
+        <div class="calendar-grid" id="calendar-grid" aria-label="Calendar days"></div>
+      </section>
+
+      <section class="settings-panel" aria-labelledby="settings-title">
+        <div>
+          <h2 id="settings-title">Per ride values</h2>
+          <p>Tap a day to switch between no ride, one ride, and two rides.</p>
+        </div>
+        <label>
+          <span>Saved per ride</span>
+          <div class="input-row">
+            <span aria-hidden="true">GBP</span>
+            <input id="money-input" type="number" min="0" step="0.10" inputmode="decimal">
+          </div>
+        </label>
+        <label>
+          <span>Calories per ride</span>
+          <div class="input-row">
+            <input id="calorie-input" type="number" min="0" step="10" inputmode="numeric">
+            <span aria-hidden="true">kcal</span>
+          </div>
+        </label>
+      </section>
+    </main>
+    <script src="app.js" defer></script>
+  </body>
+</html>
