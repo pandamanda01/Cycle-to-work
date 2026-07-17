@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Cycle to work tracker icon">
+  <rect width="512" height="512" rx="112" fill="#216e5b"/>
+  <circle cx="176" cy="328" r="78" fill="none" stroke="#f8fff9" stroke-width="34"/>
+  <circle cx="348" cy="328" r="78" fill="none" stroke="#f8fff9" stroke-width="34"/>
+  <path d="M178 328h72l45-112h-70m-19 0h72l70 112m-98 0-64-112" fill="none" stroke="#f8fff9" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M232 168h70" fill="none" stroke="#f5d8c8" stroke-width="30" stroke-linecap="round"/>
+  <path d="M128 118h256" fill="none" stroke="#f5d8c8" stroke-width="28" stroke-linecap="round"/>
+  <path d="M146 118v86m220-86v86" fill="none" stroke="#f5d8c8" stroke-width="28" stroke-linecap="round"/>
+</svg>
